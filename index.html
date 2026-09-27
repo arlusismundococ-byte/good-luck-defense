@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#091126" />
+    <meta
+      name="description"
+      content="Unnecessary cat support for a very necessary system defense."
+    />
+    <title>Department of Unnecessary Cat Support</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Tiny stars set the scene; the cats handle the actual crisis. -->
+    <div class="sky" aria-hidden="true">
+      <span class="sky__star sky__star--one">✦</span>
+      <span class="sky__star sky__star--two">·</span>
+      <span class="sky__star sky__star--three">✧</span>
+      <span class="sky__star sky__star--four">·</span>
+      <span class="sky__star sky__star--five">✦</span>
+      <span class="sky__glow"></span>
+    </div>
+
+    <main class="page">
+      <!-- The first screen is the complete meme-style welcome experience. -->
+      <section class="welcome" id="welcome-screen" aria-labelledby="welcome-title">
+        <span class="sticker sticker--top" aria-hidden="true">URGENT-ish 🚨</span>
+        <span class="sticker sticker--side" aria-hidden="true">NO PANIC<br />JUST CAT</span>
+
+        <p class="welcome__kicker"><span aria-hidden="true">📡</span> INCOMING TRANSMISSION FROM THE CAT ZONE</p>
+        <h1 class="welcome__title" id="welcome-title">WAIT<span>.</span></h1>
+        <p class="welcome__subtitle">Before you panic about your system defense...</p>
+
+        <div class="cat-scene" role="img" aria-label="A very serious cat support specialist is on duty">
+          <span class="cat-scene__spark cat-scene__spark--left" aria-hidden="true">✦</span>
+          <span class="cat-scene__spark cat-scene__spark--right" aria-hidden="true">✧</span>
+          <span class="cat-scene__float cat-scene__float--left" aria-hidden="true">🐾</span>
+          <span class="cat-scene__float cat-scene__float--right" aria-hidden="true">✨</span>
+          <div class="cat-scene__bubble cat-scene__bubble--left" aria-hidden="true">I got this.</div>
+          <div class="cat-scene__bubble cat-scene__bubble--right" aria-hidden="true">meow.</div>
+          <div class="cat-scene__cat" aria-hidden="true">
+            <span class="cat-scene__badge">CERTIFIED</span>
+            <span class="cat-scene__face">🐱</span>
+            <span class="cat-scene__caption">senior napvisor</span>
+          </div>
+          <span class="cat-scene__ground" aria-hidden="true"></span>
+        </div>
+
+        <h2 class="department-title">🐱 The Department of Unnecessary Cat Support has arrived.</h2>
+
+        <div class="meme-card" aria-label="Defense week status report">
+          <div class="meme-card__top">
+            <span>DEFENSE WEEK STATUS REPORT</span>
+            <span aria-hidden="true">LIVE-ish</span>
+          </div>
+          <p>Your defense is next week.</p>
+          <p>Your stress level: <strong>📈</strong></p>
+          <p>Your sleep schedule: <strong>💀</strong></p>
+          <p>Your confidence: <strong>somewhere in the loading screen.</strong></p>
+          <span class="meme-card__scribble" aria-hidden="true">very scientific</span>
+        </div>
+
+        <button class="button button--primary" id="reveal-button" type="button">
+          <span>OKAY... WHAT IS THIS 😭</span>
+          <span class="button__arrow" aria-hidden="true">↓</span>
+        </button>
+
+        <div class="reaction" id="reaction" aria-live="polite" hidden>
+          <p class="reaction__message">
+            Good. You clicked it.<br />
+            That means you are officially trapped here for 30 seconds.<br />
+            Don't worry. There will be cats.
+          </p>
+          <button class="button button--next" id="damage-button" type="button">
+            <span>SHOW ME THE DAMAGE</span>
+            <span class="button__arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+
+        <p class="welcome__fine-print">A totally unofficial service. The cat has no credentials.</p>
+      </section>
+
+      <!-- The second full-screen section is the playful defense status check. -->
+      <section
+        class="status-screen"
+        id="damage-screen"
+        aria-labelledby="damage-title"
+        hidden
+      >
+        <div class="status-screen__header">
+          <p class="status-screen__eyebrow">THE TOTALLY UNOFFICIAL DIAGNOSTIC</p>
+          <h1 class="status-screen__title" id="damage-title" tabindex="-1">
+            LET'S CHECK THE DAMAGE <span>😭</span>
+          </h1>
+          <p class="status-screen__subtitle">System defense preparation status:</p>
+        </div>
+
+        <div class="damage-layout">
+          <div class="status-cards" aria-label="Preparation status cards">
+            <article class="status-card status-card--confidence">
+              <span class="status-card__index" aria-hidden="true">01</span>
+              <h2>CONFIDENCE</h2>
+              <p class="status-card__value" id="confidence-value" aria-live="polite">Loading... 73%</p>
+              <span class="status-card__meter" aria-hidden="true"><span></span></span>
+            </article>
+
+            <article class="status-card status-card--sleep">
+              <span class="status-card__index" aria-hidden="true">02</span>
+              <h2>SLEEP</h2>
+              <p class="status-card__value" id="sleep-value" aria-live="polite">
+                Last seen: somewhere yesterday
+              </p>
+              <span class="status-card__stamp">PRESUMED MISSING</span>
+            </article>
+
+            <article class="status-card status-card--stress">
+              <span class="status-card__index" aria-hidden="true">03</span>
+              <h2>STRESS</h2>
+              <p class="status-card__value" id="stress-value" aria-live="polite">
+                Please do not refresh.
+              </p>
+              <span class="status-card__stamp">DO NOT POKE</span>
+            </article>
+          </div>
+
+          <figure class="photo-panel">
+            <div class="photo-panel__frame">
+              <div class="photo-placeholder" id="photo-placeholder" role="status">
+                <span class="photo-placeholder__icon" aria-hidden="true">▧</span>
+                <span>PHOTO GOES HERE</span>
+                <span class="photo-placeholder__hint">images/photo1.jpg</span>
+              </div>
+              <img
+                class="photo-panel__image"
+                id="personal-photo"
+                src="images/photo1.jpg"
+                alt="Personal photo"
+                hidden
+              />
+              <span class="photo-panel__sticker" aria-hidden="true">EVIDENCE</span>
+            </div>
+            <figcaption>Okay. Maybe you're not as doomed as you think.</figcaption>
+          </figure>
+        </div>
+
+        <div class="status-screen__actions">
+          <button class="button button--primary" id="check-again-button" type="button">
+            <span>CHECK AGAIN 😭</span>
+            <span class="button__arrow" aria-hidden="true">↻</span>
+          </button>
+          <p class="reassurance" id="reassurance" aria-live="polite" hidden>
+            Yeah... you're going to be fine.
+          </p>
+          <button class="button button--next" id="next-button" type="button" hidden>
+            <span>NEXT</span>
+            <span class="button__arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- The third section is a short, interactive stress check. -->
+      <section
+        class="quiz-screen"
+        id="quiz-screen"
+        aria-labelledby="quiz-title"
+        hidden
+      >
+        <header class="quiz-header">
+          <p class="quiz-header__eyebrow">UNOFFICIAL DEFENSE READINESS CHECK</p>
+          <h1 class="quiz-header__title" id="quiz-title" tabindex="-1">
+            DEFENSE STRESS CHECK <span>😭</span>
+          </h1>
+          <p class="quiz-header__subtitle">
+            Answer honestly. The system will judge you anyway.
+          </p>
+        </header>
+
+        <nav class="quiz-progress" aria-label="Question progress">
+          <span class="quiz-progress__step is-current" data-progress-step="0">01</span>
+          <span class="quiz-progress__line" aria-hidden="true"></span>
+          <span class="quiz-progress__step" data-progress-step="1">02</span>
+          <span class="quiz-progress__line" aria-hidden="true"></span>
+          <span class="quiz-progress__step" data-progress-step="2">03</span>
+        </nav>
+
+        <div class="quiz-question" id="question-1" data-question="0">
+          <div class="quiz-question__topline">
+            <span>QUESTION 01 / 03</span>
+            <span class="quiz-question__badge">VIBE CHECK</span>
+          </div>
+          <h2>How are you feeling about the defense?</h2>
+          <div class="answer-board" role="group" aria-label="Choose how you feel about the defense">
+            <button class="answer-button" type="button" data-correct="false" data-position="1">
+              A) I'M READY 😎
+            </button>
+            <button class="answer-button answer-button--correct" type="button" data-correct="true" data-position="2">
+              B) I'M A LITTLE STRESSED 😭
+            </button>
+            <button class="answer-button" type="button" data-correct="false" data-position="3">
+              C) I HAVE NO IDEA WHAT I'M DOING 💀
+            </button>
+          </div>
+          <p class="answer-hint" aria-live="polite"></p>
+          <div class="answer-result" aria-live="polite" hidden>
+            <p class="answer-result__line">Correct answer. At least you're being honest. 😭</p>
+            <p class="answer-result__extra">Stress detected.<br />Confidence boost required.</p>
+            <button class="button button--next question-next" type="button">
+              <span>CONTINUE 😭</span>
+              <span class="button__arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="quiz-question" id="question-2" data-question="1" hidden>
+          <div class="quiz-question__topline">
+            <span>QUESTION 02 / 03</span>
+            <span class="quiz-question__badge">UNEXPECTED EVENT</span>
+          </div>
+          <h2>If a panelist suddenly asks a question you didn't expect, what do you do?</h2>
+          <div class="answer-board" role="group" aria-label="Choose how you respond to an unexpected question">
+            <button class="answer-button" type="button" data-correct="false" data-position="1">
+              A) PANIC IMMEDIATELY 💀
+            </button>
+            <button class="answer-button answer-button--correct" type="button" data-correct="true" data-position="2">
+              B) TAKE A BREATH AND THINK
+            </button>
+            <button class="answer-button" type="button" data-correct="false" data-position="3">
+              C) SIMPLY DISAPPEAR
+            </button>
+          </div>
+          <p class="answer-hint" aria-live="polite"></p>
+          <div class="answer-result" aria-live="polite" hidden>
+            <p class="answer-result__line">See? You actually know what to do. 😭</p>
+            <button class="button button--next question-next" type="button">
+              <span>ONE MORE</span>
+              <span class="button__arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="quiz-question" id="question-3" data-question="2" hidden>
+          <div class="quiz-question__topline">
+            <span>QUESTION 03 / 03</span>
+            <span class="quiz-question__badge">IMPORTANT SCIENCE</span>
+          </div>
+          <h2>Should you give yourself a break while preparing?</h2>
+          <div class="answer-board" role="group" aria-label="Choose whether to take a break">
+            <button class="answer-button answer-button--correct" type="button" data-correct="true" data-position="2">
+              A) YES, FOR A FEW MINUTES
+            </button>
+            <button class="answer-button" type="button" data-correct="false" data-position="1">
+              B) NO, I MUST SUFFER
+            </button>
+            <button class="answer-button" type="button" data-correct="false" data-position="3">
+              C) I WILL STARE AT THE SCREEN FOR 7 HOURS
+            </button>
+          </div>
+          <p class="answer-hint" aria-live="polite"></p>
+          <div class="answer-result" aria-live="polite" hidden>
+            <p class="answer-result__line">Finally. A reasonable decision.</p>
+            <p class="answer-result__extra">
+              You're allowed to breathe, eat, sleep, and take a break.<br />
+              The system defense can wait five minutes. 😭
+            </p>
+            <button class="button button--next" id="quiz-next-button" type="button">
+              <span>NEXT</span>
+              <span class="button__arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- A silly, photo-driven break before the next not-yet-built section. -->
+      <section
+        class="meme-break"
+        id="meme-break-screen"
+        aria-labelledby="meme-break-title"
+        hidden
+      >
+        <header class="meme-break__header">
+          <p class="meme-break__eyebrow">OFFICIAL UNOFFICIAL BREAK AUTHORIZATION</p>
+          <h1 class="meme-break__title" id="meme-break-title" tabindex="-1">
+            OKAY, ENOUGH DEFENSE TALK. <span>😭</span>
+          </h1>
+          <p class="meme-break__subtitle">
+            You survived the stress check.<br />
+            You have officially earned a completely unnecessary break.
+          </p>
+        </header>
+
+        <figure class="break-photo">
+          <div class="break-photo__frame" id="break-photo-frame">
+            <div class="break-photo__placeholder" id="break-photo-placeholder" role="status">
+              <span class="break-photo__placeholder-icon" aria-hidden="true">▧</span>
+              <span>YOUR PHOTO GOES HERE</span>
+              <span class="break-photo__hint" id="break-photo-path">images/photo1.jpg</span>
+            </div>
+            <img
+              class="break-photo__image"
+              id="break-photo-image"
+              alt="Personal photo for a short study break"
+              hidden
+            />
+            <span class="break-photo__sticker" aria-hidden="true">BREAK TIME</span>
+            <span class="break-photo__counter" id="break-photo-counter">01 / 03</span>
+          </div>
+          <figcaption>10 seconds of absolutely productive procrastination.</figcaption>
+        </figure>
+
+        <div class="meme-break__actions">
+          <button class="button button--primary" id="break-help-button" type="button">
+            <span>THIS IS ACTUALLY HELPING 😭</span>
+            <span class="button__arrow" aria-hidden="true">↓</span>
+          </button>
+          <p class="break-message" id="break-message" aria-live="polite" hidden></p>
+          <button class="button button--next" id="another-photo-button" type="button" hidden>
+            <span>ANOTHER ONE</span>
+            <span class="button__arrow" aria-hidden="true">↻</span>
+          </button>
+        </div>
+
+        <div class="break-finale" id="break-finale" aria-live="polite" hidden>
+          <p class="break-finale__title">Alright. Break's over. 😭</p>
+          <p class="break-finale__copy">But seriously, don't forget to breathe.</p>
+          <button class="button button--next" id="back-to-business-button" type="button">
+            <span>BACK TO BUSINESS</span>
+            <span class="button__arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- The investigation report appears row by row after the break. -->
+      <section
+        class="incident-screen"
+        id="incident-screen"
+        aria-labelledby="incident-title"
+        hidden
+      >
+        <header class="incident-header">
+          <p class="incident-header__eyebrow">TOTALLY OFFICIAL · DEFINITELY NOT A GUESS</p>
+          <h1 class="incident-header__title" id="incident-title" tabindex="-1">
+            TEAMMATE INCIDENT REPORT <span>💀</span>
+          </h1>
+          <p class="incident-header__subtitle">We investigated the situation.</p>
+        </header>
+
+        <div class="incident-report" aria-label="Fake teammate investigation report">
+          <div class="incident-report__topline">
+            <span>CASE FILE #404-LOL</span>
+            <span class="incident-report__stamp">VERY OFFICIAL</span>
+          </div>
+
+          <dl class="incident-entries">
+            <div class="incident-entry" data-report-entry hidden>
+              <dt>TEAMMATE STATUS</dt>
+              <dd><span class="incident-entry__dot" aria-hidden="true"></span>Online</dd>
+            </div>
+            <div class="incident-entry" data-report-entry hidden>
+              <dt>WORK STATUS</dt>
+              <dd>Coming soon...</dd>
+            </div>
+            <div class="incident-entry" data-report-entry hidden>
+              <dt>PART CONTRIBUTION</dt>
+              <dd>Loading...</dd>
+            </div>
+            <div class="incident-entry" data-report-entry hidden>
+              <dt>EXPECTED COMPLETION</dt>
+              <dd>Probably later.</dd>
+            </div>
+            <div class="incident-entry incident-entry--final" data-report-entry hidden>
+              <dt>FINAL RESULT</dt>
+              <dd>404: CONTRIBUTION NOT FOUND 💀</dd>
+            </div>
+          </dl>
+
+          <p class="incident-report__assessment" id="incident-assessment" hidden>
+            At this point, the system has decided that<br class="desktop-break" />
+            you are the groupmate.
+          </p>
+        </div>
+
+        <div class="incident-actions" id="incident-investigation" hidden>
+          <button class="button button--primary" id="investigate-button" type="button">
+            <span>INVESTIGATE FURTHER</span>
+            <span class="button__arrow" aria-hidden="true">↘</span>
+          </button>
+
+          <div class="excuse-area" id="excuse-area" hidden>
+            <p class="excuse-area__label">RECOVERED MESSAGE · SOURCE: GROUP CHAT</p>
+            <p class="excuse-bubble" id="excuse-bubble" aria-live="polite"></p>
+            <button class="button button--next" id="one-more-excuse-button" type="button">
+              <span>ONE MORE EXCUSE</span>
+              <span class="button__arrow" aria-hidden="true">↻</span>
+            </button>
+          </div>
+
+          <div class="incident-finale" id="incident-finale" aria-live="polite" hidden>
+            <p class="incident-finale__headline">
+              Okay. Investigation terminated.<br />
+              We have seen enough. 😭
+            </p>
+            <p class="incident-finale__recommendation">
+              <strong>Recommendation:</strong><br />
+              Do your part, breathe, and don't commit crimes.
+            </p>
+            <button class="button button--next" id="fair-enough-button" type="button">
+              <span>FAIR ENOUGH 😭</span>
+              <span class="button__arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- The confidence boost is the calm pause before the final message. -->
+      <section
+        class="confidence-screen"
+        id="confidence-screen"
+        aria-labelledby="confidence-title"
+        hidden
+      >
+        <header class="confidence-header">
+          <p class="confidence-header__eyebrow">A QUICK SYSTEM UPDATE</p>
+          <h1 class="confidence-header__title" id="confidence-title" tabindex="-1">
+            CONFIDENCE BOOST <span>💙</span>
+          </h1>
+          <p class="confidence-header__subtitle">Okay, jokes aside for a second.</p>
+        </header>
+
+        <article class="confidence-card">
+          <span class="confidence-card__badge" aria-hidden="true">REAL TALK · NO JUMPSCARES</span>
+          <p class="confidence-card__lead">You've already made it this far.</p>
+          <p class="confidence-card__body">
+            You've spent time building the system.<br />
+            You've prepared.<br />
+            You've probably stressed about it more than once. 😭
+          </p>
+          <p class="confidence-card__setup">So when the defense finally comes...</p>
+
+          <section class="confidence-meter" aria-labelledby="confidence-meter-title">
+            <div class="confidence-meter__topline">
+              <h2 id="confidence-meter-title">CONFIDENCE LEVEL</h2>
+              <span class="confidence-meter__percent" id="confidence-percent">30%</span>
+            </div>
+            <div
+              class="confidence-meter__track"
+              id="confidence-track"
+              role="progressbar"
+              aria-label="Confidence level"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="30"
+            >
+              <span class="confidence-meter__fill" id="confidence-fill"></span>
+            </div>
+            <p class="confidence-meter__message" id="confidence-message" aria-live="polite">
+              LOADING...
+            </p>
+          </section>
+
+          <button class="button button--primary confidence-boost" id="boost-confidence-button" type="button">
+            <span>BOOST MY CONFIDENCE</span>
+            <span class="button__arrow" aria-hidden="true">↑</span>
+          </button>
+
+          <div class="confidence-completion" id="confidence-completion" aria-live="polite" hidden>
+            <p class="confidence-completion__reminder">
+              <strong>Remember:</strong><br />
+              You don't have to know every possible question.<br />
+              You just need to stay calm, explain what you know,<br class="desktop-break" />
+              and take a moment when you need to think.
+            </p>
+            <p class="confidence-completion__mantra">One question at a time.</p>
+            <p class="confidence-completion__tease">And if everything goes wrong...</p>
+            <button class="button button--next" id="what-then-button" type="button">
+              <span>WHAT THEN? 😭</span>
+              <span class="button__arrow" aria-hidden="true">↓</span>
+            </button>
+          </div>
+
+          <div class="confidence-recovery" id="confidence-recovery" aria-live="polite" hidden>
+            <p>
+              Then you breathe, recover, and keep going.<br />
+              That's literally what the defense is for.
+            </p>
+            <button class="button button--next" id="ready-button" type="button">
+              <span>OKAY, I'M READY</span>
+              <span class="button__arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <!-- A sincere send-off and a restartable ending for the whole experience. -->
+      <section
+        class="final-screen"
+        id="final-screen"
+        aria-labelledby="final-title"
+        hidden
+      >
+        <div class="final-screen__glow" aria-hidden="true"></div>
+        <p class="final-status" id="final-status">SUPPORT PROTOCOL: COMPLETE ✓</p>
+        <header class="final-header">
+          <h1 class="final-title" id="final-title" tabindex="-1">YOU GOT THIS. <span>💙</span></h1>
+          <p class="final-subtitle">Good luck sa imong system defense! 💙</p>
+        </header>
+
+        <div class="final-layout">
+          <article class="final-message" aria-label="A good luck message">
+            <p class="final-paragraph" data-final-paragraph hidden>
+              Alam na stressful kaayo ni, especially sa preparation, presentation,
+              and all the questions nga basin i-ask sa panel. 😭
+            </p>
+            <p class="final-paragraph" data-final-paragraph hidden>
+              But don't overthink it too much. You already worked hard for this,
+              so trust yourself pud.
+            </p>
+            <p class="final-paragraph" data-final-paragraph hidden>
+              If naay question nga wala ka kabalo dayon, breathe lang sa.
+              Take your time, think, then answer what you know.
+            </p>
+            <p class="final-paragraph" data-final-paragraph hidden>
+              You don't have to be perfect.<br />
+              Basta do your best, stay calm, and padayon lang.
+            </p>
+            <p class="final-message__mantra" data-final-paragraph hidden>
+              One question at a time.<br />
+              One answer at a time.
+            </p>
+            <p class="final-message__last" data-final-paragraph hidden>
+              Makaya ra na nimo. Seriously. 💙
+            </p>
+          </article>
+
+          <figure class="final-photo">
+            <div class="final-photo__frame">
+              <div class="final-photo__placeholder" id="final-photo-placeholder" role="status">
+                <span class="final-photo__placeholder-icon" aria-hidden="true">▧</span>
+                <span>YOUR FINAL PHOTO GOES HERE</span>
+                <span class="final-photo__path">images/photo4.jpg</span>
+              </div>
+              <img
+                class="final-photo__image"
+                id="final-photo-image"
+                src="images/photo4.jpg"
+                alt="Personal photo for the good luck message"
+                hidden
+              />
+              <span class="final-photo__sticker" aria-hidden="true">YOU'VE GOT THIS</span>
+            </div>
+            <figcaption>
+              Good luck again! Kaya ra na nimo. Ayaw kaayo kabalaka. 😭
+              <strong>Now go make that defense proud. 💙</strong>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="final-actions">
+          <button class="button button--primary final-ready-button" id="final-ready-button" type="button" disabled>
+            <span>I'M READY 💙</span>
+            <span class="button__arrow" aria-hidden="true">✦</span>
+          </button>
+        </div>
+
+        <div class="shutdown-message" id="shutdown-message" aria-live="polite" hidden>
+          <p class="shutdown-message__status" id="shutdown-status"></p>
+          <p class="shutdown-message__line" id="shutdown-line"></p>
+          <p class="shutdown-message__end" id="shutdown-end" hidden>END OF SUPPORT SYSTEM</p>
+          <button class="button button--next restart-button" id="restart-button" type="button" hidden>
+            <span>RESTART</span>
+            <span class="button__arrow" aria-hidden="true">↺</span>
+          </button>
+        </div>
+
+        <div class="celebration" id="celebration" aria-hidden="true"></div>
+      </section>
+    </main>
+  </body>
+</html>
